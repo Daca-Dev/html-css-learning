@@ -1,5 +1,11 @@
 @mixin flex-central($justify: center, $align: center) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
 }
+
+@mixin screen-max($max) {
+  @media (max-width: $max - 1) {
+    @content;
+  }
+} ;
