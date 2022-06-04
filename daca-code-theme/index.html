@@ -11,38 +11,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-  <!-- material icon -->
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <!-- bootstrap icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="/path/to/styles/default.min.css">
+  <!-- main css -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <div class="page-container">
-    <div class="head-navbar">
-      <div class="logo">
-        <span  class="bi bi-code-slash"></span>
-        <p>Daca Code</p>
-      </div>
-      <div class="menu"> 
-        <div class="menu__controls">
-          <button class="menu__controls-btn bi bi-translate md-24"></button>
-          <button class="menu__controls-btn-dropdown bi bi-brightness-high-fill md-24"></button>
+    <div class="head-navbar-bg">
+      <div class="head-navbar">
+        <div class="logo">
+          <span  class="bi bi-code-slash"></span>
+          <p>Daca Code</p>
         </div>
-        <div class="menu__search">
-          <form class="menu__search-form">
-            <label for="search" class="menu__search-form-label bi bi-search"></label>
-            <input class="menu__search-form-input" type="text" name="search" id="search" placeholder="search...">
-          </form>
+        <div class="menu"> 
+          <div class="menu__controls">
+            <button class="menu__controls-btn bi bi-translate md-24"></button>
+            <button class="menu__controls-btn-dropdown bi bi-brightness-high-fill md-24"></button>
+          </div>
+          <div class="menu__search">
+            <form class="menu__search-form">
+              <label for="search" class="menu__search-form-label bi bi-search"></label>
+              <input class="menu__search-form-input" type="text" name="search" id="search" placeholder="search...">
+            </form>
+          </div>
+          <ul class="menu__links">
+            <li class="menu__links-items"><a href="#">Home</a></li>
+            <li class="menu__links-items"><a href="#">Blog</a></li>
+            <li class="menu__links-items"><a href="#" class="bi bi-person-workspace md-24"></a></li>
+            <li class="menu__links-items"><a href="#" class="bi bi-envelope-fill md-24"></a></li>
+          </ul>
         </div>
-        <ul class="menu__links">
-          <li class="menu__links-items"><a href="#">Home</a></li>
-          <li class="menu__links-items"><a href="#">Blog</a></li>
-          <li class="menu__links-items"><a href="#" class="bi bi-person-workspace md-24"></a></li>
-          <li class="menu__links-items"><a href="#" class="bi bi-envelope-fill md-24"></a></li>
-        </ul>
       </div>
     </div>
     <div class="left-content">
@@ -72,7 +74,13 @@
               <p>David A. Casas</p>
             </div>
           </div>
+
+          <hr>
         </header>
+
+        <h2 class="post-section-1">section title for articles</h2>
+        <h3 class="post-section-2">sub section for articles</h3>
+        <h4 class="post-section-3">sub sub section for articles</h4>
 
         <p class="article__p">
           Lorem ipsum, <strong>dolor sit</strong> amet consectetur <em>adipisicing elit</em>. Aspernatur, incidunt pariatur libero iusto quaerat laborum dolore, asperiores saepe perspiciatis officiis cupiditate quibusdam porro veritatis natus iure molestiae quod eligendi magni.
@@ -84,6 +92,8 @@
           Lorem ipsum, <span class="inline-code">dolor sit amet consectetur</span> adipisicing elit. Aspernatur, incidunt pariatur libero iusto quaerat laborum dolore, asperiores saepe perspiciatis officiis cupiditate quibusdam <span class="inline-code">porro veritatis</span> natus iure molestiae quod eligendi magni.
         </p>
 
+        <pre><code class="language-html">...</code></pre>
+
         <!-- callout -->
         <div class="callout">
           <header class="callout__header">
@@ -93,30 +103,9 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ab laudantium natus quaerat fugit quis quisquam molestias, magni dolorem odio amet incidunt voluptates minus unde! Assumenda ratione sequi repudiandae repellat!
           </p>
         </div>
-        <div class="callout--success">
-          <header class="callout__header">
-            <p><span class="bi bi-info-circle-fill"></span> Header </p>
-          </header>
-          <p class="callout__content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ab laudantium natus quaerat fugit quis quisquam molestias, magni dolorem odio amet incidunt voluptates minus unde! Assumenda ratione sequi repudiandae repellat!
-          </p>
-        </div>
-        <div class="callout--warning">
-          <header class="callout__header">
-            <p><span class="bi bi-info-circle-fill"></span> Header </p>
-          </header>
-          <p class="callout__content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ab laudantium natus quaerat fugit quis quisquam molestias, magni dolorem odio amet incidunt voluptates minus unde! Assumenda ratione sequi repudiandae repellat!
-          </p>
-        </div>
-        <div class="callout--danger">
-          <header class="callout__header">
-            <p><span class="bi bi-info-circle-fill"></span> Header </p>
-          </header>
-          <p class="callout__content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ab laudantium natus quaerat fugit quis quisquam molestias, magni dolorem odio amet incidunt voluptates minus unde! Assumenda ratione sequi repudiandae repellat!
-          </p>
-        </div>
+        <!-- <div class="callout--success"> -->
+        <!-- <div class="callout--warning"> -->
+        <!-- <div class="callout--danger"> -->
         
       </article>
 
@@ -161,5 +150,9 @@
       </div>
     </div>
   </div>
+  
+  <!-- Scripts -->
+  <script src="/path/to/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </body>
 </html>
