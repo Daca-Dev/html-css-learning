@@ -1,0 +1,36 @@
+@import "base";
+
+.team-item {
+    position: relative;
+    transition: .5s;
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 3rem;
+        right: 3rem;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        background: $light;
+        box-shadow: 0 0 45px rgba(0, 0, 0, .1);
+        transition: .5s;
+        z-index: -1;
+    }
+
+    &:hover {
+        &::after {
+            background: $primary;
+        }
+
+        h5, small {
+            color: $light;
+        }
+    }
+
+    h5,
+    small {
+        transition: .5s;
+    }
+}

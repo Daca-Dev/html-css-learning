@@ -1,0 +1,115 @@
+@import "base";
+
+.navbar-light {
+    & .navbar-nav {
+        & .nav-link {
+            position: relative;
+            margin-left: 25px;
+            padding: 35px 0;
+            color: $light;
+            outline: none;
+            transition: .5s;
+
+            &:hover,
+            &.active {
+                color: $secondary;
+            }
+        }
+    }
+    & .navbar-brand h1 {
+        color: $light;
+    }
+
+    & .navbar-brand img {
+        max-height: 60px;
+        transition: .5s;
+    }
+}
+
+.sticky-top.navbar-light {
+    & .navbar-nav .nav-link {
+        padding: 20px 0;
+        color: $dark;
+    }
+    & .navbar-brand img {
+        max-height: 45px;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .sticky-top.navbar-light {
+        position: relative;
+        background: #FFFFFF;
+        
+        & .navbar-nav .nav-link {
+            padding: 10px 0;
+            margin-left: 0;
+            color: $dark;
+        }
+    }
+
+    .navbar-light {
+        & .navbar-collapse {
+            margin-top: 15px;
+            border-top: 1px solid #DDDDDD;
+        }
+
+        & .navbar-nav .nav-link,
+        & .navbar-brand h1 {
+            color: $primary !important;
+            padding: 10px 0;
+        }
+
+        & .navbar-brand img {
+            max-height: 45px;
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .navbar-light {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(256, 256, 256, .1);
+        z-index: 999;
+        color: $primary;
+
+        & .navbar-nav {
+            & .nav-link {
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    bottom: -1px;
+                    left: 50%;
+                    background: $secondary;
+                    transition: .5s;
+                }
+
+                &:hover::before,
+                &.active::before {
+                    width: 100%;
+                    left: 0;
+                }
+
+                &.nav-contact::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .sticky-top.navbar-light {
+        position: fixed;
+        background: #FFFFFF;
+
+        & .navbar-brand h1 {
+            color: $primary;
+        }
+    }
+}

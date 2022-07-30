@@ -1,0 +1,39 @@
+@import "base";
+
+.newsletter,
+.testimonial {
+    background:
+        url(../img/bg-top.png),
+        url(../img/bg-bottom.png);
+    background-position:
+        left top,
+        right bottom;
+    background-repeat: no-repeat;
+}
+
+.testimonial {
+    &-carousel {
+        .owl-item {
+            .testimonial-item,
+            &.center .testimonial-item * {
+                transition: .5s;
+            }
+
+            &.center {
+                .testimonial-item {
+                    background: $light !important;
+                    border-color: $light;
+                    * {
+                        color: #888888;
+                    }
+                    i {
+                        color: $primary !important;
+                    }
+                    h6 {
+                        color: $dark !important;
+                    }
+                }
+            }
+        }
+    }
+}

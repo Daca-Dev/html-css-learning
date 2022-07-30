@@ -1,0 +1,32 @@
+@import "base";
+
+.code-block {
+    max-width: 800px;
+
+    &--header {
+        background-color: $primary;
+        border-radius: 5px 5px 0 0;
+
+        &-circle {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+
+            &.red {
+                background-color: #FF5A57;
+            }
+            &.ambar {
+                background-color: #F6C12C;
+            }
+            &.green {
+                background-color: #26C944;
+            }
+        }
+    }
+
+    &--code {
+        display: grid;
+        border-radius: 0 0 5px 5px;
+    }
+}

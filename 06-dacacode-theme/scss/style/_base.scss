@@ -1,0 +1,18 @@
+$primary: #009485;
+$secondary: #3fd080;
+$light: #F7FAFF;
+$dark: #1D1D27;
+
+/*** Expand Bootstrap functionality ***/
+@keyframes scaleInfinity {
+    from {transform: scale(1)}
+    50% {transform: scale(1.08); box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);}
+    to {transform: scale(1);}
+}
+
+
+.list-group-item:hover .badge {
+    animation-name: scaleInfinity;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
