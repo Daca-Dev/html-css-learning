@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    height: 100px;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    transition: all 0.2s;
+}
+.container:hover .box:hover {
+    transform: scale(1.2);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+}
+.box1 {
+    background-color: yellowgreen;
+    transition: transform 500ms;
+}
+.box1:hover {
+    background-color: red;
+}
+.box2 {
+    background-color: goldenrod;
+    transition: transform 1s;
+}
+.box3 {
+    background-color: aqua;
+    transition: transform 1.5s;
+}

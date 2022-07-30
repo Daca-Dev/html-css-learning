@@ -1,0 +1,40 @@
+// variables
+fuente1 = 'Lato', sans-serif
+fuente2 = 'Oswald', sans-serif
+// colores
+color-primario = #333333
+color-secundario = #8841da
+color-blanco = #fff
+// mixin
+contenedor()
+  display: flex
+  width: 90%
+  margin: 0 auto
+  padding: 30px 0
+caja-sombra()
+  background-color: color-blanco
+  box-shadow: 0 20px 33px 0 rgba(color-primario, 0.2)
+// funciones
+opacidad(color, cantidad)
+	alpha(color, cantidad)
+// loop
+for header in 3 2 1
+	h{header}
+		font-size: 35px - (5 * header)
+		margin: 0
+// condicional
+titulos(fuente)
+	if fuente == fuente1
+		font-family: fuente1
+	else
+		font-family: fuente2
+		text-transform: uppercase
+		font-weight: 600
+// globales
+* 
+  box-sizing: border-box
+
+body
+  margin 0
+  color: color-primario
+	titulos(fuente1)

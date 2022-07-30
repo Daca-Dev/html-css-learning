@@ -1,0 +1,17 @@
+.contenedor--cajas {
+  width: 1400px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.caja {
+  max-width: 430px;
+}
+.caja__contenido {
+  padding: 25px;
+  background-color: ;
+}

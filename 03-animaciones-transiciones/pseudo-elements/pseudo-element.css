@@ -1,0 +1,13 @@
+body {
+    background-color: #ddd;
+}
+
+/* ! SEUDO ELEMENTOS */
+/* colocar un contenido o elemento antes del elemento */
+.container::before {
+    content: ":)";
+}
+/* colocar un contenido o elemento después del elemento */
+.container::after {
+    content: ":D";
+}

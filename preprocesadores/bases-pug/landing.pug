@@ -1,0 +1,23 @@
+
+extends ./components/template.pug
+block contenido
+    section.intro 
+        div.intro__imagen: img(src="./images/imagen.png" alt="Pug es genial")
+        .intro__contenido
+            h2 #{titulo}
+            p
+                | Lorem ipsum dolor sit amet consectetur
+                | adipisicing elit. Porro laborum, eveniet 
+                | quod est sunt maxime iste perferendis quisquam
+                | quis reprehenderit nisi tempore exercitationem at 
+                | sint explicabo, error ducimus, facere nostrum?
+                span Voluptas provident maxime est veniam ducimus dolorum vero? Rerum.
+            a.boton leer más
+    main.contenido 
+        //- loop
+        each titulo in titulos
+            +caja(
+                "imagen.png",
+                titulo,
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            )

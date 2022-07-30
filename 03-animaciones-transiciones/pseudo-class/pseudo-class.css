@@ -1,0 +1,27 @@
+body {
+    background-color: #ddd;
+}
+
+/* !SEUDO CLASES */
+/* enlaces a los que no se han accedido */
+a:link {
+    color: red;
+}
+/* enlace ya visitado */
+a:visited {
+    color: green;
+}
+/* cuando el cursor pasa sobre el elemento */
+a:hover {
+    background-color: yellow;
+}
+/* como no seleccionar unos elementos */
+p:not(.maravillas) {
+    color: blue;
+}
+/* seleccionar un hijo en especifico */
+.container div:nth-child(1) {
+    background-color: tomato;
+}
+
+/* ! SEUDO ELEMENTOS */
