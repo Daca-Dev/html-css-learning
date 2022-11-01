@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: 'Lato', sans-serif;
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: #fafafa;
+  transform-origin: top left; /* origin point used to transform operations */
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+  z-index: -2;
+}
+
+
+.circle-container {
+  position: fixed;
+  top: -90px;
+  left: -90px;
+}
+
+.circle {
+  background-color: #ff7979;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  transition: transform .5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 90px;
+  background-color: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.nav-menu {
+  color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 50px;
+  z-index: -1;
+}
+
+.nav-menu ul {
+  list-style: none;
+  font-family: inherit;
+  padding: 0;
+}
+
+.nav-menu ul li{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin: 1em 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.nav-menu ul li:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 8px #f3f3f3;
+}
+
+.nav-menu ul li:active {
+  transform: scale(.98);
+}
