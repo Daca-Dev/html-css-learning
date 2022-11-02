@@ -29,16 +29,14 @@ body {
   padding: 15px;
   height: 50px;
   width: 50px;
-  transition: width .5s linear;
+  transition: all .6s linear;
 }
 
 .search .input:focus {
   outline: none;
 }
 
-.search .input.active {
-  right: 0;
-  position: absolute;
+.search.active .input {
   width: 250px;
 }
 

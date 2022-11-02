@@ -85,6 +85,11 @@ body {
   z-index: -1;
 }
 
+.nav-menu.active {
+  z-index: initial;
+}
+
+
 .nav-menu ul {
   list-style: none;
   font-family: inherit;

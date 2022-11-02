@@ -1,5 +1,5 @@
 const searchBtn = document.querySelector('.btn');
-const inputSearch = document.querySelector('input');
+const inputSearch = document.querySelector('.search');
 
 function toggleInput() {
   const state = inputSearch.classList.contains('active');
