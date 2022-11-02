@@ -24,14 +24,9 @@
         <div class="col-md-6">
           <h1>Contenido</h1>
           <hr>
-          <div class="list-group">
-            <a href="./01-maquetacion-practica/" class="list-group-item list-group-item-action">1. Maquetación práctica</a>
-            <a href="#" class="list-group-item list-group-item-action">2. Mobile first</a>
-            <a href="#" class="list-group-item list-group-item-action">3. Animations and transitions</a>
-            <a href="#" class="list-group-item list-group-item-action">4. SASS - Natours</a>
-            <a href="#" class="list-group-item list-group-item-action">5. Pre processos</a>
-            <a href="#" class="list-group-item list-group-item-action">6. Daca Code theme</a>
-          </div>
+          <ul class="list-group" id="links">
+            
+          </ul>
         </div>
       </div>
     </div>
@@ -40,5 +35,31 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const ulLinks = document.querySelector('#links');
+      const url = "https://api.github.com/repos/Daca-Dev/html-css-learning/contents";
+      let resp;
+
+      function buildLitag(href = '#', text) {
+        const a = document.createElement('a');
+        
+        a.classList.add('list-group-item', 'list-group-item-action');
+        a.href = href;
+        a.textContent = text;
+        ulLinks.appendChild(a);
+      }
+
+      fetch(url, { method: "GET" })
+        .then((response) => response.json())
+        .then((files) => {
+          const paths = files.filter(({ name }) => {
+            const re = /^\d\d-.*/
+            return name !== "index.html" && re.test(name)
+          });
+          paths.forEach((path, index) => {
+            buildLitag(`./${path.name}`, `${index + 1}. ${path.name.replace('-', ' ').slice(3)}`)
+          })
+        });
+    </script>
   </body>
 </html>

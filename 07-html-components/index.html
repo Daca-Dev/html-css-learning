@@ -1,21 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Components | Daca Code</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="container">
+    <nav class="navbar navbar-dark bg-dark px-4">
+      <div class="container-fluid">
+        <a href="../" class="navbar-brand mb-0 h1">HTML and CSS Learning</a>
+        <span class="navbar-brand mb-0 h1">Daca Code</span>
+      </div>
+    </nav>
+    <div class="container mt-5">
       <div class="row">
         <div class="col">
           <h1>HTML Components</h1>
-          <hr>
-
+          <hr />
+          <div class="list-group" id="links">
+            
+          </div>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const ulLinks = document.querySelector('#links');
+      const url = "https://api.github.com/repos/Daca-Dev/html-css-learning/contents/07-html-components?ref=main";
+      let resp;
+
+      function buildLitag(href = '#', text) {
+        const a = document.createElement('a');
+        
+        a.classList.add('list-group-item', 'list-group-item-action');
+        a.href = href;
+        a.textContent = text;
+        ulLinks.appendChild(a);
+      }
+
+      fetch(url, { method: "GET" })
+        .then((response) => response.json())
+        .then((files) => {
+          const paths = files.filter(({ name }) => name.endsWith(".html") && name !== "index.html");
+          paths.forEach((path, index) => {
+            buildLitag(`./${path.name}`, `${index + 1}. ${path.name.replace('-', ' ').slice(0, -5)}`)
+          })
+        });
+    </script>
   </body>
 </html>
