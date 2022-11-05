@@ -34,7 +34,7 @@ h1 {
 }
 
 .box:nth-of-type(even) {
-  transform: translateX(-400%);
+  transform: translateX(-200vw);
 }
 
 .box.show {
